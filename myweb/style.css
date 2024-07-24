@@ -1,0 +1,116 @@
+body{
+    background-image: url(Images/bg_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color:#303c6c;
+}
+
+h1{
+    font-family: Playfair Display SC, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 5em;
+    font-weight: bolder;
+    color: #f4976c;
+    text-align: center;
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+ 
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    color: #fbe8a6;
+    text-align: center;
+    left: 0;
+    line-height: 200px;
+    margin-top: -50px;
+    position: absolute;
+    text-align: center;
+    top: 51%;
+    width: 100%;
+}
+
+dl{
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 80px;
+    position: absolute;
+    text-align: center;
+    top: 55%;
+    width: 100%;
+}
+.button{
+    border-radius: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 20px;
+    width: 200px;
+    height: 80px;
+    
+}
+.button--blue:hover {
+    background-color: #b4Dfe5;
+    color: #303C6C;
+    transition: all 0.125s;
+    font-size: 2rem;
+  }
+.gallery_{
+    display: inline-block;
+    border: 5px solid #B8CABA hsl(0, 0, 100%);
+    margin: 5px;
+}
+
+.gallery_:hover{
+
+    border: 1px solid #5A6B5D hsl(0, 0, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.modal__footer {
+    border-top: 1px solid #ddd;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+@media only screen and (min-width: 769px) {
+    .header {
+      max-width: 1440px;
+      margin-inline: auto;
+    }
+  
+    .body {
+      grid-template: auto/3fr 4fr;
+      max-width: 1440px;
+      margin-inline: auto;
+    }
+  
+    .bookshelf__header {
+      grid-template: auto/auto auto;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .bookshelf__navigation .button {
+      padding-inline: 1.5rem;
+    }
+  
+  
+  }
+
+

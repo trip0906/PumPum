@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+    <link rel="icon" type="image/png" href="Images/KenIcon.png">
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Pumpkins Bookshelf</title>
+     <link rel="preconnect" href="https://fonts.gstatic.com" />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+       rel="stylesheet"
+     />
+     <link
+       rel="stylesheet"
+       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+     />
+     <link rel="stylesheet" href="./css/style.css" />
+   </head>
+ 
+   <body>
+     <header class="header">
+       <h1 class="header__brand">
+        <div style="text-align: center;">
+        <img src="Images/RafIcon.png"  class="kbackground" width="100px"> <a href="index.html"
+        target="_blank"
+        title="Home">
+        Pumpkin Bookshelf</a>
+        <img src="Images/KenIcon.png"  class="kbackground" width="100px">
+      </div>
+       </h1>
+     </header>
+ 
+     <main class="body">
+       <form class="form">
+         <h2 class="title">Add Book</h2>
+         <section class="input-group">
+           <label for="title">Title</label>
+           <input type="text" id="title" class="form-input" required />
+         </section>
+         <section class="input-group">
+           <label for="author">Author</label>
+           <input type="text" id="author" class="form-input" required />
+         </section>
+         <section class="input-group">
+           <label for="year">Year</label>
+           <input type="number" id="year" class="form-input" required />
+         </section>
+         <section class="checkbox-group">
+           <input type="checkbox" id="isComplete" />
+           <label for="isComplete">Already Read</label>
+         </section>
+         <button type="submit" class="button button--blue">Save</button>
+       </form>
+       <div class="bookshelf">
+         <header class="bookshelf__header">
+           <h2 class="title">Bookshelf</h2>
+           <form>
+             <input
+               type="search"
+               id="search"
+               class="form-input"
+               placeholder="Search book . . ."
+             />
+           </form>
+         </header>
+         <div class="bookshelf__list">
+           <nav class="bookshelf__navigation">
+             <button class="button button--blue active" id="notCompleteListNav">
+               Unread
+             </button>
+             <button class="button button--blue" id="completeListNav">
+               Already Read
+             </button>
+           </nav>
+           <div class="bookshelf__table">
+             <table id="notCompleteList">
+               <thead>
+                 <tr>
+                   <th>Title</th>
+                   <th>Author</th>
+                   <th>Year</th>
+                   <th></th>
+                 </tr>
+               </thead>
+               <tbody></tbody>
+             </table>
+             <table id="completeList" class="fade">
+               <thead>
+                 <tr>
+                   <th>Title</th>
+                   <th>Author</th>
+                   <th>Year</th>
+                   <th></th>
+                 </tr>
+               </thead>
+               <tbody></tbody>
+             </table>
+           </div>
+         </div>
+         <footer class="bookshelf__footer">
+           <div class="bookshelf__notes">
+             <p>note :</p>
+             <p>
+               <i class="far fa-circle"></i> = Unread |
+               <i class="fas fa-check-circle"></i> = Already Read
+             </p>
+             <p>click the icon to change the book status</p>
+           </div>
+           <button class="bookshelf__reset">reset bookshelf</button>
+         </footer>
+       </div>
+     </main>
+ 
+     <footer class="footer">
+       <p class="footer__copyright">
+         Copyright &copy; 2024
+         <a href="https://www.instagram.com/bjadventure_/">ALE</a>.
+         All rights reserved for RIS. 
+       </p>
+     </footer>
+ 
+     <script>
+       const notCompleteList = document.getElementById("notCompleteList");
+       const completeList = document.getElementById("completeList");
+       const completeListNav = document.getElementById("completeListNav");
+       const notCompleteListNav = document.getElementById("notCompleteListNav");
+ 
+       completeListNav.addEventListener("click", () => {
+         setTimeout(() => {
+           completeListNav.classList.add("active");
+           notCompleteListNav.classList.remove("active");
+           completeList.classList.remove("fade");
+           notCompleteList.classList.add("fade");
+         }, 125);
+       });
+ 
+       notCompleteListNav.addEventListener("click", () => {
+         setTimeout(() => {
+           notCompleteListNav.classList.add("active");
+           completeListNav.classList.remove("active");
+           notCompleteList.classList.remove("fade");
+           completeList.classList.add("fade");
+         }, 125);
+       });
+     </script>
+ 
+     <script src="./js/data.js"></script>
+ 
+     <script src="./js/dom/buttonElements.js"></script>
+     <script src="./js/dom/confirmationElements.js"></script>
+     <script src="./js/dom/bookElements.js"></script>
+     <script src="./js/dom/addBook.js"></script>
+     <script src="./js/dom/resetBookshelf.js"></script>
+ 
+     <script src="./js/main.js"></script>
+   </body>
+ </html>
+ 

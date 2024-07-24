@@ -1,0 +1,45 @@
+body{
+    background-image: url("Images/bg_image.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color:#eee8de;
+}
+.gallery_{
+    display: inline-block;
+    border: 5px solid #B8CABA hsl(0, 0, 100%);
+    margin: 5px;
+}
+
+.gallery_:hover{
+
+    border: 1px solid #5A6B5D hsl(0, 0, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+.hero {
+    width: 100%;
+    height: vh;
+    
+}
+
+.hero .carousel {
+     width: 300px;
+     margin: 100px auto 0;
+     overflow: visible;
+}
+
+.carousel img {
+    -webkit-box-reflect: below 20px linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.3));
+    border: 5px solid rgba(255, 3, 3, 0);
+    border-radius: 1.5rem;
+    max-width: fit-content;
+    max-height: fit-content;
+}

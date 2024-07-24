@@ -1,0 +1,378 @@
+:root {
+  font-family: Playfair Display SC, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-image: url(Images/ms_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+  margin: 0;
+  padding: 0;
+  padding-inline: 5vw;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #fbe8a6 , #f4976C);
+  color: white;
+}
+.gallery_{
+  display: inline-block;
+  border: 5px solid #B8CABA hsl(0, 0, 100%);
+  margin: 5px;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0.25rem #303C6C;
+}
+
+.button {
+  background-color: white;
+  color: #303C6C;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 8px 1.5rem;
+  border: 1px solid #303C6C;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button--blue {
+  background-color: #303C6C;
+  color: white;
+}
+
+.button--blue:hover {
+  background-color: white;
+  color: #303C6C;
+  transition: all 0.125s;
+}
+
+.button--red {
+  background-color: #d04423;
+  color: white;
+  border: 1px solid #d04423;
+}
+
+.button--red:hover {
+  background-color: white;
+  color: #d04423;
+  transition: all 0.125s;
+}
+
+.title {
+  color: black;
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+}
+
+.input-group {
+  display: grid;
+  grid-template-rows: auto auto;
+  margin-top: 1rem;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-group {
+  margin: 1.5rem 0 2rem;
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+}
+
+.checkbox-group input {
+  margin: 0;
+  margin-right: 0.5rem;
+}
+
+.form-input {
+  border: 1px solid #ddd;
+  padding: 8px 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.header__brand {
+  margin-top: 0;
+  padding-block: 2rem;
+}
+
+.header__brand i {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+
+.body {
+  display: grid;
+  grid-template: auto auto/auto;
+  gap: 3vw;
+}
+
+.form {
+  background-color: white;
+  color: black;
+  padding: 2.5rem;
+  height: max-content;
+}
+
+.form .title {
+  text-align: center;
+}
+
+.form .button {
+  width: 100%;
+}
+
+.bookshelf {
+  background-color: white;
+  color: black;
+  padding: 2.5rem;
+}
+
+.bookshelf__header {
+  display: grid;
+  grid-template: auto auto/auto;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bookshelf__header .title {
+  margin-bottom: 0;
+}
+
+.bookshelf__list {
+  margin-top: 0.5rem;
+}
+
+.bookshelf__navigation {
+  display: flex;
+}
+
+.bookshelf__navigation .button {
+  border-bottom: none;
+  position: relative;
+  margin-bottom: -1px;
+  padding-inline: 1.25rem;
+  transition: all 0.125s;
+}
+
+.bookshelf__navigation .button:first-child {
+  border-right: none;
+}
+
+.bookshelf__navigation .button.active {
+  cursor: default;
+  pointer-events: none;
+  background-color: white;
+  color: #303C6C;
+  z-index: 2;
+}
+.header{
+  color: #303C6C;
+}
+.bookshelf__table {
+  padding: 0.5rem 1rem 1rem;
+  border: 1px solid #303C6C;
+  height: 19rem;
+  overflow: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.bookshelf__table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.bookshelf__table table.fade {
+  display: none;
+}
+
+.bookshelf__table tr.fade td {
+  border-bottom: 1px solid transparent;
+  opacity: 0;
+  transition: all 0.125s;
+}
+
+.bookshelf__table tr th {
+  text-align: left;
+  border-bottom: 1px solid #303C6C;
+  padding-block: 1.25rem;
+}
+
+.bookshelf__table tr td {
+  border-bottom: 1px solid #ddd;
+  padding-block: 1.25rem;
+}
+
+.bookshelf__action {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.25rem;
+}
+
+.bookshelf__action .button {
+  font-size: 1.5rem;
+  padding: 0;
+  border: none;
+}
+
+.bookshelf__action .button .fa-circle,
+.bookshelf__action .button .fa-check-circle {
+  color: #1d6f1d;
+}
+
+.bookshelf__action .button:hover .fa-circle,
+.bookshelf__action .button:hover .fa-check-circle {
+  color: #1d6f1daa;
+  transition: all 0.125s;
+}
+
+.bookshelf__action .button .fa-trash {
+  color: #d04423;
+}
+
+.bookshelf__action .button:hover .fa-trash {
+  color: #d04423aa;
+  transition: all 0.125s;
+}
+
+.bookshelf__footer {
+  display: grid;
+  grid-template: auto auto/auto;
+}
+
+.bookshelf__notes {
+  font-size: 13px;
+  margin-top: 1.5rem;
+}
+
+.bookshelf__notes p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.bookshelf__notes p:first-child {
+  margin-bottom: 1rem;
+}
+
+.bookshelf__notes i {
+  color: #1d6f1d;
+}
+
+.bookshelf__reset {
+  font-size: 13px;
+  margin-top: 1.5rem;
+  text-align: right;
+  height: max-content;
+  display: inline;
+  background-color: transparent;
+  border: none;
+  color: #f70606;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bookshelf__reset:hover {
+  color: black;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-block: 1rem;
+  color: black;
+}
+.footer__copyright a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.footer__copyright a:hover {
+  color: #ff0000;
+  transition: all 0.125s;
+}
+
+.confirmation {
+  background-color: #00000050;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1010;
+  transition: all 0.125s;
+}
+
+.confirmation.fade {
+  opacity: 0;
+}
+
+.modal {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  border: 1px solid #ddd;
+  min-width: 17rem;
+  max-width: 30rem;
+  width: 50%;
+  box-shadow: 0 0 10px ;
+}
+
+.modal__header {
+  color: black;
+  padding: 1.25rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal__header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.modal__body {
+  font-size: 1.125rem;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.modal__footer {
+  border-top: 1px solid #ddd;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .header {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .body {
+    grid-template: auto/3fr 4fr;
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .bookshelf__header {
+    grid-template: auto/auto auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bookshelf__navigation .button {
+    padding-inline: 1.5rem;
+  }
+
+
+}
